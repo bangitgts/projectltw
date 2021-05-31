@@ -2,7 +2,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Đăng ký</title>
@@ -62,13 +61,13 @@
                             <span class="focus-input100" data-symbol="&#xf206;"></span>
                         </div>
 
-                        <div class="wrap-input100 validate-input" data-validate="Email is required">
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Email is required">
                             <span class="label-input100">Email</span>
                             <input class="input100" type="email" name="email" placeholder="Type your email" required>
                             <span class="focus-input100" data-symbol="&#xf190;"></span>
                         </div>
 
-                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Password is required">
                             <span class="label-input100">Password</span>
                             <input class="input100" type="password" name="password" placeholder="Type your password" required>
                             <span class="focus-input100" data-symbol="&#xf190;"></span>
@@ -97,5 +96,4 @@
         </div>
     <?php } ?>
 </body>
-
 </html>
