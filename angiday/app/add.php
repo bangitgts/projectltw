@@ -9,20 +9,21 @@ if (isset($_POST['title'])) {
     
     if (empty($monan) | empty($title)) {
         header("Location: ../index.php?mess=error");
+        echo $monan;
     } else {
-        if ($monan = 'monchinh') {
+        if ($monan == 'monchinh') {
             $sql = "INSERT INTO anchinh (tenmonan, username)
              VALUES ('$title', '$user')";
             if (mysqli_query($con, $sql)) {
-                echo $monan;
+                //echo $monan;
                 header("Location: ../index.php?mess=success");
             }
-        }
-        if ($monan = 'monphu') {
+        } if ($monan = 'monphu') {
             $sql = "INSERT INTO anphu (tenmonan, username)
-            VALUES ('$title', 'Doe')";
+            VALUES ('$title', '$user')";
             if (mysqli_query($con, $sql)) {
-                header("Location: ../index.php?mess=success");
+               // echo $monan;
+               header("Location: ../index.php?mess=success");
             }
         }
         mysqli_close($con);

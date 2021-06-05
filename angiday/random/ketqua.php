@@ -103,67 +103,82 @@
 
     <div id="wrapper">
         <div class="main-content">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
-                    <div class="text-center panel-heading">Các Món Ăn Chính</div>
+                    <div class="text-center panel-heading">Kết quả</div>
                     <!-- Table -->
-                    <table class="table">
-                        <thead>
-                            <?php
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h4 class="text-center">Các món ăn chính</h4>
+                        <?php
+                        if (true) {
+                            include '../../connect/connectdb.php';
+                            include '../../auth/auth.php';
+
+                            $monphu = $_POST['monphu'];
+                            $monchinh = $_POST['monchinh'];
                             $user = $_SESSION['username'];
-                            $sql = "SELECT tenmonan FROM anchinh WHERE username= '$user'";
+                            
+                            $sql = "SELECT *
+                                    FROM anchinh
+                                    WHERE username = '$user'
+                                    ORDER BY RAND()
+                                    LIMIT $monchinh";
                             $result = $con->query($sql);
+                           
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>';
-                                    echo '<th class="text-center">';
+                                    echo "<p class='text-center'>";
                                     echo $row["tenmonan"];
-                                    echo '</tr>';
-                                    echo '</th>';
+                                    echo "<br>";
+                                    echo "</p>";
                                 }
                             } else {
                                 echo "0 results";
                             }
-                            ?>
+                            $con->close();
+                        }
 
-                        </thead>
+                        ?>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h4 class="text-center">Các món ăn phụ</h4>
+                        <?php
+                        if (true) {
+                            include '../../connect/connectdb.php';
+                            include '../../auth/auth.php';
 
-                    </table>
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
-                <div class="panel panel-default">
-                    <!-- Default panel contents -->
-                    <div class="text-center panel-heading">Các Món Ăn Chính</div>
-                    <!-- Table -->
-                    <table class="table">
-                        <thead>
-                            <?php
+                            $monphu = $_POST['monphu'];
+                            $monchinh = $_POST['monchinh'];
                             $user = $_SESSION['username'];
-                            $sql = "SELECT tenmonan FROM anphu WHERE username='$user'";
+                            
+                            $sql = "SELECT *
+                                    FROM anphu
+                                    WHERE username = '$user'
+                                    ORDER BY RAND()
+                                    LIMIT $monphu";
                             $result = $con->query($sql);
+                           
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>';
-                                    echo '<th class="text-center">';
+                                    echo "<p class='text-center'>";
                                     echo $row["tenmonan"];
-                                    echo '</tr>';
-                                    echo '</th>';
+                                    echo "<br>";
+                                    echo "</p>";
                                 }
                             } else {
                                 echo "0 results";
                             }
-                            ?>
+                            $con->close();
+                        }
 
-                        </thead>
-
-                    </table>
+                        ?>
+                    </div>
                 </div>
             </div>
             <footer class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -6,7 +6,6 @@
 <head>
     <meta charset="utf-8">
     <title>Đăng ký</title>
-
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="icon" type="image/png" href="../login/images/icons/favicon.ico" />

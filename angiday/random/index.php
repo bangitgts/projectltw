@@ -103,69 +103,25 @@
 
     <div id="wrapper">
         <div class="main-content">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
-                    <div class="text-center panel-heading">Các Món Ăn Chính</div>
+                    <div class="text-center panel-heading">Lấy danh sách món ngẫu nhiên</div>
                     <!-- Table -->
-                    <table class="table">
-                        <thead>
-                            <?php
-                            $user = $_SESSION['username'];
-                            $sql = "SELECT tenmonan FROM anchinh WHERE username= '$user'";
-                            $result = $con->query($sql);
-                            if ($result->num_rows > 0) {
-                                // output data of each row
-                                while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>';
-                                    echo '<th class="text-center">';
-                                    echo $row["tenmonan"];
-                                    echo '</tr>';
-                                    echo '</th>';
-                                }
-                            } else {
-                                echo "0 results";
-                            }
-                            ?>
-
-                        </thead>
-
-                    </table>
+                    <br>
+                    <form action="./ketqua.php" method="POST" role="form">
+                        <p>Số món chính:</p>
+                        <input type="number" name="monchinh" id="monchinh" class="form-control" value="monchinh" required="required">
+                        <p>Số món phụ:</p>
+                        <input type="number" name="monphu" id="monphu" class="form-control" value="monphu" required="required">
+                        <br>
+                        <button type="submit" class="btn btn-primary">Lưu Lại </button>
+                   </form>
+                  
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
-                <div class="panel panel-default">
-                    <!-- Default panel contents -->
-                    <div class="text-center panel-heading">Các Món Ăn Chính</div>
-                    <!-- Table -->
-                    <table class="table">
-                        <thead>
-                            <?php
-                            $user = $_SESSION['username'];
-                            $sql = "SELECT tenmonan FROM anphu WHERE username='$user'";
-                            $result = $con->query($sql);
-                            if ($result->num_rows > 0) {
-                                // output data of each row
-                                while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>';
-                                    echo '<th class="text-center">';
-                                    echo $row["tenmonan"];
-                                    echo '</tr>';
-                                    echo '</th>';
-                                }
-                            } else {
-                                echo "0 results";
-                            }
-                            ?>
-
-                        </thead>
-
-                    </table>
-                </div>
-            </div>
+          
             <footer class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <ul class="list-inline">
                     <li>2021 © </li>

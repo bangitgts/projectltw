@@ -82,7 +82,7 @@ include '../auth/auth.php';
                 ?></p>
                 <ul class="sub-ico-item">
                     <li><a href="#">Settings</a></li>
-                    <li><a class="js__logout" href="http://localhost/project-ltw/login">Log Out</a></li>
+                    <li><a class="js__logout" href="http://localhost/project-ltw/logout">Log Out</a></li>
                 </ul>
                 <!-- /.sub-ico-item -->
             </div>
