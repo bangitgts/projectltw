@@ -106,7 +106,7 @@
         </div>
         <!-- /.main-content -->
     </div>
-
+</div>
     <script src="./assets/scripts/jquery.min.js"></script>
     <script src="./assets/scripts/modernizr.min.js"></script>
     <script src="./assets/plugin/bootstrap/js/bootstrap.min.js"></script>

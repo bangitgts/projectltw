@@ -10,7 +10,7 @@ include '../auth/auth.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>To-Do List</title>
+    <title>Quản lí công việc</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="../assets/styles/style.min.css" />
 
@@ -29,7 +29,6 @@ include '../auth/auth.php';
 </head>
 
 <body>
-
     <div class="main-menu">
         <header class="header">
             <a href="index.html" class="logo">Lập Trình Web</a>
@@ -41,7 +40,7 @@ include '../auth/auth.php';
             <div class="navigation">
                 <ul class="menu js__accordion">
                     <li>
-                        <a class="waves-effect" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
+                        <a class="waves-effect" href="/"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
                     </li>
                     <li>
                         <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
@@ -52,10 +51,10 @@ include '../auth/auth.php';
                         <!-- /.sub-menu js__content -->
                     </li>
                     <li class="current active">
-                        <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
+                        <a class="waves-effect parent-item js__control " href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
-                            <li><a href="/todolist" class="active">Thêm Công Việc</a></li>
-                            <li><a href="/todolist/show/">Danh Sách Công Việc</a></li>
+                            <li class="current active"><a href="./">Thêm Công Việc</a></li>
+                            <li><a href="./show/">Danh Sách Công Việc</a></li>
                         </ul>
                         <!-- /.sub-menu js__content -->
                     </li>
@@ -84,7 +83,6 @@ include '../auth/auth.php';
                 <img src="http://placehold.it/80x80" alt="" class="ico-img">
                 <ul class="sub-ico-item">
                     <li><a href="#">Settings</a></li>
-                    <li><a href="#">Blog</a></li>
                     <li><a class="js__logout" href="#">Log Out</a></li>
                 </ul>
                 <!-- /.sub-ico-item -->
@@ -103,70 +101,41 @@ include '../auth/auth.php';
                         <?php if (isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
                             <input type="text" name="title" style="border-color: #ff6666" placeholder="This field is required" />
                             <button type="submit">Thêm công việc</button>
+
                         <?php } else { ?>
                             <input type="text" name="title" placeholder="Thêm công việc của bạn?" />
                             <button type="submit">Thêm công việc&nbsp; </button>
-                            <br>
-                                <button style="background-color:orange" >
-                                    Bấm vào đây để xem danh sách công việc
-                                    <link rel="stylesheet" href="">
-                                </a> &nbsp; </button>
                         <?php } ?>
                     </form>
                 </div>
                 <?php
                 $username = $_SESSION['username'];
-                //$todos = $conn->query("SELECT * FROM todos WHERE username ='$username' ORDER BY id DESC");
+                $todos = $conn->query("SELECT * FROM todos WHERE username ='$username' ORDER BY id DESC");
                 ?>
                 <?php
-                if (isset($_GET['mess']) && $_GET['mess'] == "success") {
-                    echo '<script language="javascript">';
-                    echo  'alert("Thêm thành công")';
+                if (isset($_GET['mess']) && $_GET['mess'] == 'success') {
+                    echo '<script>';
+                    echo 'alert("Thêm thành công!");';
                     echo '</script>';
                 }
-                else{
-                    echo '';
-                }
                 ?>
-
-
                 <div class="show-todo-section">
-
-                    <?php if (true) { ?>
-
-                        <div class="todo-item">
-                            <div class="empty">
-                                <img src="img/f.png" width="100%" />
-                                <img src="img/Ellipsis.gif" width="80px">
-                            </div>
-
+                    <div class="todo-item">
+                        <div class="empty">
+                            <img src="img/f.png" width="100%" />
+                            <img src="img/Ellipsis.gif" width="80px">
                         </div>
-                    <?php
-                    } ?>
-
-                    <!-- <?php while ($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
-                        <div class="todo-item">
-                            <span id="<?php echo $todo['id']; ?>" class="remove-to-do">x</span>
-                            <?php if ($todo['checked']) { ?>
-                                <input type="checkbox" class="check-box" data-todo-id="<?php echo $todo['id']; ?>" checked />
-                                <h2 class="checked"><?php echo $todo['title'] ?></h2>
-                            <?php } else { ?>
-                                <input type="checkbox" data-todo-id="<?php echo $todo['id']; ?>" class="check-box" />
-                                <h2><?php echo $todo['title'] ?></h2>
-                            <?php } ?>
-                            <br>
-                            <small>created: <?php echo $todo['date_time'] ?></small>
-                        </div>
-                    <?php } ?> -->
+                    </div>
                 </div>
             </div>
             <footer class="footer">
                 <ul class="list-inline">
-                    <li>2016 ©</li>
+                    <li>2021 © </li>
                 </ul>
             </footer>
         </div>
         <!-- /.main-content -->
+    </div>
     </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
