@@ -103,29 +103,48 @@ include '../auth/auth.php';
                         <?php if (isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
                             <input type="text" name="title" style="border-color: #ff6666" placeholder="This field is required" />
                             <button type="submit">Thêm công việc</button>
-
                         <?php } else { ?>
                             <input type="text" name="title" placeholder="Thêm công việc của bạn?" />
                             <button type="submit">Thêm công việc&nbsp; </button>
+                            <br>
+                                <button style="background-color:orange" >
+                                    Bấm vào đây để xem danh sách công việc
+                                    <link rel="stylesheet" href="">
+                                </a> &nbsp; </button>
                         <?php } ?>
                     </form>
                 </div>
                 <?php
                 $username = $_SESSION['username'];
-                $todos = $conn->query("SELECT * FROM todos WHERE username ='$username' ORDER BY id DESC");
+                //$todos = $conn->query("SELECT * FROM todos WHERE username ='$username' ORDER BY id DESC");
                 ?>
+                <?php
+                if (isset($_GET['mess']) && $_GET['mess'] == "success") {
+                    echo '<script language="javascript">';
+                    echo  'alert("Thêm thành công")';
+                    echo '</script>';
+                }
+                else{
+                    echo '';
+                }
+                ?>
+
+
                 <div class="show-todo-section">
-                    <?php if ($todos->rowCount() <= 0) { ?>
+
+                    <?php if (true) { ?>
+
                         <div class="todo-item">
                             <div class="empty">
                                 <img src="img/f.png" width="100%" />
                                 <img src="img/Ellipsis.gif" width="80px">
                             </div>
+
                         </div>
                     <?php
                     } ?>
 
-                    <?php while ($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <!-- <?php while ($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
                         <div class="todo-item">
                             <span id="<?php echo $todo['id']; ?>" class="remove-to-do">x</span>
                             <?php if ($todo['checked']) { ?>
@@ -138,7 +157,7 @@ include '../auth/auth.php';
                             <br>
                             <small>created: <?php echo $todo['date_time'] ?></small>
                         </div>
-                    <?php } ?>
+                    <?php } ?> -->
                 </div>
             </div>
             <footer class="footer">
