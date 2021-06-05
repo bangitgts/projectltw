@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -47,7 +48,7 @@
         if ($rows == 1) {
             $_SESSION['username'] = $username;
             setcookie("username", $_SESSION['username'], time() + 600, "/");
-            header("Location: http://localhost/project-ltw/todolist/");
+            header("Location: ../");
         } else {
     ?>
             <div class="limiter">

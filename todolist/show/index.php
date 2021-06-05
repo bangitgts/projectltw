@@ -63,7 +63,7 @@ require '../../auth/auth.php'
                         <a class="waves-effect" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
                     </li>
                     <li>
-                        <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
+                        <a class="waves-effect parent-item js__control" href="../../angiday/"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
                             <li><a href="">Thêm Món Ăn</a></li>
                             <li><a href="">Danh Sách Món Ăn</a></li>
@@ -100,10 +100,12 @@ require '../../auth/auth.php'
             <!-- /.ico-item -->
 
             <div class="ico-item">
-                <img src="http://placehold.it/80x80" alt="" class="ico-img">
+                <?php
+                echo 'Tài khoản: ' . '<strong>' . $_SESSION['username'] . '</strong>';
+                ?>
                 <ul class="sub-ico-item">
-                    <li><a href="#">Settings</a></li>
-                    <li><a class="js__logout" href="#">Log Out</a></li>
+                    <li><a href="../../changepassword/">Đổi mật khẩu</a></li>
+                    <li><a class="" href="../../logout/">Log Out</a></li>
                 </ul>
                 <!-- /.sub-ico-item -->
             </div>
@@ -124,8 +126,6 @@ require '../../auth/auth.php'
                 <br>
                 <br>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    
-                   
                     
                     <?php if ($todos->rowCount() <= 0) { ?>
                         <div class="todo-item">

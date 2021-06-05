@@ -13,10 +13,6 @@ require('../auth/auth.php');
     <meta name="author" content="" />
 
     <title>Thêm Món Ăn</title>
-    <link rel="stylesheet" type="text/css" href="../login/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../login/css/util.css">
-    <link rel="stylesheet" type="text/css" href="../login/css/main.css">
-
     <!-- Main Styles -->
     <link rel="stylesheet" href="../assets/styles/style.min.css" />
 
@@ -46,17 +42,17 @@ require('../auth/auth.php');
             <div class="navigation">
                 <ul class="menu js__accordion">
                     <li>
-                        <a class="waves-effect" href="/"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Thêm Món Ăn</span></a>
+                        <a class="waves-effect" href="../"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
                     </li>
                     <li class="current active">
                         <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
-                            <li class="current active"><a href="icons-font-awesome-icons.html">Thêm Món Ăn</a></li>
-                            <li><a href="icons-fontello.html">Danh Sách Món Ăn</a></li>
+                            <li class="current active"><a href="#">Thêm Món Ăn</a></li>
+                            <li><a href="./listfood/">Danh Sách Món Ăn</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
+                        <a class="waves-effect parent-item js__control" href="../todolist/"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
                             <li><a href="./todolist/">Thêm Công Việc</a></li>
                             <li><a href="./todolist/show/">Danh Sách Công Việc</a></li>
@@ -85,11 +81,12 @@ require('../auth/auth.php');
             <!-- /.ico-item -->
 
             <div class="ico-item">
-                <img src="http://placehold.it/80x80" alt="" class="ico-img">
+                <?php
+                echo 'Tài khoản: ' . '<strong>' . $_SESSION['username'] . '</strong>';
+                ?>
                 <ul class="sub-ico-item">
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a class="js__logout" href="#">Log Out</a></li>
+                    <li><a href="../changepassword/">Đổi mật khẩu</a></li>
+                    <li><a class="" href="../logout/">Log Out</a></li>
                 </ul>
                 <!-- /.sub-ico-item -->
             </div>
@@ -111,6 +108,7 @@ require('../auth/auth.php');
                         echo '<div class="radio">';
                         echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
                         echo '<label for="monchinh">Món Chính</label>';
+                        echo '<br>';
                         echo '<input type="radio" id="monphu" name="monan" value="monphu">';
                         echo '<label for="monphu">Món Phụ</label><br>';
                         echo '</div>';;
@@ -126,6 +124,8 @@ require('../auth/auth.php');
                         echo '<div class="radio">';
                         echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
                         echo '<label for="monchinh">Món Chính</label>';
+                        echo '<br>';
+
                         echo '<input type="radio" id="monphu" name="monan" value="monphu">';
                         echo '<label for="monphu">Món Phụ</label><br>';
                         echo '</div>';
@@ -137,6 +137,8 @@ require('../auth/auth.php');
                         echo '<div class="radio">';
                         echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
                         echo '<label for="monchinh">Món Chính</label>';
+                        echo '<br>';
+
                         echo '<input type="radio" id="monphu" name="monan" value="monphu">';
                         echo '<label for="monphu">Món Phụ</label><br>';
                         echo '</div>';
@@ -168,5 +170,4 @@ require('../auth/auth.php');
     <script src="../assets/scripts/main.min.js"></script>
     <script src="../assets/color-switcher/color-switcher.min.js"></script>
 </body>
-
 </html>

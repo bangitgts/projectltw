@@ -9,10 +9,6 @@
     <meta name="author" content="" />
 
     <title>Thêm Món Ăn</title>
-    <link rel="stylesheet" type="text/css" href="../../login/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../login/css/util.css">
-    <link rel="stylesheet" type="text/css" href="../../login/css/main.css">
-
     <!-- Main Styles -->
     <link rel="stylesheet" href="../../assets/styles/style.min.css" />
 
@@ -103,8 +99,6 @@
 
     <div id="wrapper">
         <div class="main-content">
-            
-
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <div class="panel panel-default">
