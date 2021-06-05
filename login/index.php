@@ -1,26 +1,39 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>Đăng nhập hệ thống</title>
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="css/util.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+   <!--===============================================================================================-->
+   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
 </head>
 
 <body>
     <?php
+    function mysql_error()
+    {
+        echo "faild";
+    }
     require('../connect/connectdb.php');
     session_start();
     if (isset($_POST['username'])) {
@@ -33,7 +46,8 @@
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['username'] = $username;
-            header("Location: ../");
+            setcookie("username", $_SESSION['username'], time() + 600, "/");
+            header("Location: http://localhost/project-ltw/todolist/");
         } else {
     ?>
             <div class="limiter">
@@ -54,7 +68,7 @@
                                 <span class="focus-input100" data-symbol="&#xf190;"></span>
                             </div>
 
-                            <p style="color: red; font-weight: 500; font-size:16px; font-family:Arial, Helvetica, sans-serif;">Bạn nhập sai tài khoản hoặc mật khẩu. Mời nhập lại</p>
+                            <p style="color: red; font-weight: 500; font-size:16px; font-family: Roboto, sans-serif;">Bạn nhập sai tài khoản hoặc mật khẩu. Mời nhập lại</p>
 
                             <div class="text-right p-t-8 p-b-31">
                                 <a href="#"> Forgot password? </a>
@@ -68,9 +82,9 @@
                             </div>
 
                             <div class="flex-col-c p-t-20">
-                            <span class="txt1 p-b-0"> Hoặc đăng kí để sử dụng </span>
-                            <a href="../register/" class="txt2"> <strong>NHẤN VÀO ĐỂ Đăng kí ngay <strong> </a>
-                        </div>
+                                <span class="txt1 p-b-0"> Hoặc đăng kí để sử dụng </span>
+                                <a href="../register/" class="txt2"> <strong>NHẤN VÀO ĐỂ Đăng kí ngay <strong> </a>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -80,8 +94,7 @@
     } else {
         ?>
         <div class="limiter">
-            <div class="container-login100" 
-            >
+            <div class="container-login100">
                 <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style="background-color: #e4e9f1;">
                     <form class="login100-form validate-form" action="" method="post" name="login">
                         <span class="login100-form-title p-b-49"> Login </span>
@@ -108,24 +121,6 @@
                                 <button type="submit" name="submit" value="Đăng nhập" class="login100-form-btn">Login</button>
                             </div>
                         </div>
-<!-- 
-                        <div class="txt1 text-center p-t-54 p-b-20">
-                            <span> Or Sign Up Using </span>
-                        </div>
-
-                        <div class="flex-c-m">
-                            <a href="#" class="login100-social-item bg1">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-
-                            <a href="#" class="login100-social-item bg2">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-
-                            <a href="#" class="login100-social-item bg3">
-                                <i class="fa fa-google"></i>
-                            </a>
-                        </div> -->
 
                         <div class="flex-col-c p-t-20">
                             <span class="txt1 p-b-0"> Hoặc đăng kí để sử dụng </span>
