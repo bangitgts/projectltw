@@ -4,7 +4,6 @@ if (isset($_POST['title'])) {
     require '../db_conn.php';
     include '../../auth/auth.php';
     $title = $_POST['title'];
-    echo "Welcome " . $_SESSION["username"];
     if (empty($title)) {
         header("Location: ../index.php?mess=error");
     } else {

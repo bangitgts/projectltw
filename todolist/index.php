@@ -1,5 +1,5 @@
 <?php
-require 'db_conn.php';
+include 'db_conn.php';
 include '../auth/auth.php';
 ?>
 
@@ -76,14 +76,13 @@ include '../auth/auth.php';
         </div>
         <!-- /.pull-left -->
         <div class="pull-right">
-
-            <!-- /.ico-item -->
-
             <div class="ico-item">
-                <img src="http://placehold.it/80x80" alt="" class="ico-img">
+                <p><?php
+                echo $_SESSION['username'];
+                ?></p>
                 <ul class="sub-ico-item">
                     <li><a href="#">Settings</a></li>
-                    <li><a class="js__logout" href="#">Log Out</a></li>
+                    <li><a class="js__logout" href="http://localhost/project-ltw/login">Log Out</a></li>
                 </ul>
                 <!-- /.sub-ico-item -->
             </div>
@@ -110,7 +109,7 @@ include '../auth/auth.php';
                 </div>
                 <?php
                 $username = $_SESSION['username'];
-                $todos = $conn->query("SELECT * FROM todos WHERE username ='$username' ORDER BY id DESC");
+              //  $todos = $conn->query("SELECT * FROM todos WHERE username ='$username' ORDER BY id DESC");
                 ?>
                 <?php
                 if (isset($_GET['mess']) && $_GET['mess'] == 'success') {
