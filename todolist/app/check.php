@@ -17,17 +17,13 @@ if(isset($_POST['id'])){
         $checked = $todo['checked'];
 
         $uChecked = $checked ? 0 : 1;
-
         $res = $conn->query("UPDATE todos SET checked=$uChecked WHERE id=$uId");
 
         if($res){
             echo $checked;
         }else {
             echo "error";
-            if (isset($_SESSION["username"])) {
-                echo "Welcome " . $_SESSION["username"];
-            } else {
-                echo "Không có tên";
+            
         }
         $conn = null;
         exit();

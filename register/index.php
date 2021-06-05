@@ -161,9 +161,6 @@
             echo '</div>';
             echo '</div>';
             echo '</div>';
-            $addTodolist = "INSERT into `todos`(username) VALUES ('$username')";
-            mysqli_query($con,$addTodolist);
-
         }
     } else { ?>
         <div class="limiter">
