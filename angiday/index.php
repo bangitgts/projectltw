@@ -49,6 +49,8 @@ require('../auth/auth.php');
                         <ul class="sub-menu js__content">
                             <li class="current active"><a href="#">Thêm Món Ăn</a></li>
                             <li><a href="./listfood/">Danh Sách Món Ăn</a></li>
+                            <li><a href="./random/">Random xem ăn gì nào</a></li>
+
                         </ul>
                     </li>
                     <li>

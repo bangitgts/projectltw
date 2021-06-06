@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../login/css/util.css" />
     <link rel="stylesheet" type="text/css" href="../login/css/main.css" />
     <style>
-        body {
+        * {
             font-family: 'Roboto', sans-serif;
         }
 

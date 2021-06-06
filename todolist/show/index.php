@@ -60,7 +60,7 @@ require '../../auth/auth.php'
             <div class="navigation">
                 <ul class="menu js__accordion">
                     <li>
-                        <a class="waves-effect" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
+                        <a class="waves-effect" href="../../"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
                     </li>
                     <li>
                         <a class="waves-effect parent-item js__control" href="../../angiday/"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>

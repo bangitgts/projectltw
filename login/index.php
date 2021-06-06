@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>Đăng nhập hệ thống</title>
-   <!--===============================================================================================-->
-   <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -69,7 +70,7 @@
                                 <span class="focus-input100" data-symbol="&#xf190;"></span>
                             </div>
 
-                            <p style="color: red; font-weight: 500; font-size:16px; font-family: Roboto, sans-serif;">Bạn nhập sai tài khoản hoặc mật khẩu. Mời nhập lại</p>
+                            <p style="color: red; font-weight: 500; font-size:16px; font-family: 'Roboto', sans-serif;">Bạn nhập sai tài khoản hoặc mật khẩu. Mời nhập lại</p>
 
                             <div class="text-right p-t-8 p-b-31">
                                 <a href="#"> Forgot password? </a>
@@ -113,9 +114,8 @@
                         </div>
 
                         <div class="text-right p-t-8 p-b-31">
-                            <a href="#"> Forgot password? </a>
+                            <a href="#"> Quên mật khẩu? </a>
                         </div>
-
                         <div class="container-login100-form-btn">
                             <div class="wrap-login100-form-btn">
                                 <div class="login100-form-bgbtn"></div>
@@ -125,7 +125,7 @@
 
                         <div class="flex-col-c p-t-20">
                             <span class="txt1 p-b-0"> Hoặc đăng kí để sử dụng </span>
-                            <a href="../register/" class="txt2"> <strong>NHẤN VÀO ĐỂ Đăng kí ngay <strong> </a>
+                            <a href="../register/" class="txt2"> <strong>Nhấn vào đây để đăng kí ngay <strong> </a>
                         </div>
                     </form>
                 </div>

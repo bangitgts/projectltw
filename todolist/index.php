@@ -27,6 +27,11 @@ include '../auth/auth.php';
     <link rel="stylesheet" href="../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 
 <body>
     <div class="main-menu">
@@ -40,7 +45,7 @@ include '../auth/auth.php';
             <div class="navigation">
                 <ul class="menu js__accordion">
                     <li>
-                        <a class="waves-effect" href="/"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
+                        <a class="waves-effect" href="../"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
                     </li>
                     <li>
                         <a class="waves-effect parent-item js__control" href="../angiday/"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>

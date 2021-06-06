@@ -1,4 +1,3 @@
-
 <?php
 require("./auth/auth.php");
 ?>
@@ -32,6 +31,11 @@ require("./auth/auth.php");
     <!-- Color Picker -->
     <link rel="stylesheet" href="./assets/color-switcher/color-switcher.min.css" />
 </head>
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 
 <body>
     <div class="main-menu">

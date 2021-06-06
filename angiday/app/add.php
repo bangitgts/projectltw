@@ -18,7 +18,7 @@ if (isset($_POST['title'])) {
                 //echo $monan;
                 header("Location: ../index.php?mess=success");
             }
-        } if ($monan = 'monphu') {
+        } if ($monan == 'monphu') {
             $sql = "INSERT INTO anphu (tenmonan, username)
             VALUES ('$title', '$user')";
             if (mysqli_query($con, $sql)) {

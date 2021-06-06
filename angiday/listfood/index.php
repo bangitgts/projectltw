@@ -9,7 +9,7 @@
     <meta name="author" content="" />
 
     <title>Thêm Món Ăn</title>
-   
+
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="../../assets/styles/style.min.css" />
@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="../../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 
 <body>
     <?php
@@ -53,6 +58,7 @@
                         <ul class="sub-menu js__content">
                             <li><a href="../">Thêm Món Ăn</a></li>
                             <li class="current active"><a href="#">Danh Sách Món Ăn</a></li>
+                            <li><a href="../random/">Random xem ăn gì nào</a></li>
                         </ul>
                     </li>
                     <li>
@@ -138,7 +144,7 @@
 
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
-                    <div class="text-center panel-heading">Các Món Ăn Chính</div>
+                    <div class="text-center panel-heading">Các Món Ăn Phụ</div>
                     <!-- Table -->
                     <table class="table">
                         <thead>

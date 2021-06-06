@@ -44,17 +44,19 @@
             <div class="navigation">
                 <ul class="menu js__accordion">
                     <li>
-                        <a class="waves-effect" href="/"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Thêm Món Ăn</span></a>
+                        <a class="waves-effect" href="../../index.php"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Giới Thiệu</span></a>
                     </li>
                     <li class="current active">
                         <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
-                            <li><a href="icons-font-awesome-icons.html">Thêm Món Ăn</a></li>
-                            <li class="current active"><a href="icons-fontello.html">Danh Sách Món Ăn</a></li>
+                            <li><a href="../index.php">Thêm Món Ăn</a></li>
+                            <li ><a href="../listfood/">Danh Sách Món Ăn</a></li>
+                            <li class="current active"><a href="#">Random xem ăn gì nào</a></li>
+
                         </ul>
                     </li>
                     <li>
-                        <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
+                        <a class="waves-effect parent-item js__control" href="../../todolist/"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
                             <li><a href="./todolist/">Thêm Công Việc</a></li>
                             <li><a href="./todolist/show/">Danh Sách Công Việc</a></li>
@@ -82,12 +84,14 @@
 
             <!-- /.ico-item -->
 
+           
             <div class="ico-item">
-                <img src="http://placehold.it/80x80" alt="" class="ico-img">
+                <?php
+                echo 'Tài khoản: ' . '<strong>' . $_SESSION['username'] . '</strong>';
+                ?>
                 <ul class="sub-ico-item">
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a class="js__logout" href="#">Log Out</a></li>
+                    <li><a href="../../changepassword/">Đổi mật khẩu</a></li>
+                    <li><a class="" href="../../logout/">Log Out</a></li>
                 </ul>
                 <!-- /.sub-ico-item -->
             </div>
