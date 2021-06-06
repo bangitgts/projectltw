@@ -126,7 +126,7 @@ require '../../auth/auth.php'
                 <br>
                 <br>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    
+
                     <?php if ($todos->rowCount() <= 0) { ?>
                         <div class="todo-item">
                             <div class="empty">
@@ -137,7 +137,7 @@ require '../../auth/auth.php'
                     <?php } ?>
 
                     <?php while ($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
-                        
+
                         <div class="todo-item">
                             <span id="<?php echo $todo['id']; ?>" class="remove-to-do">x</span>
                             <?php if ($todo['checked']) { ?>

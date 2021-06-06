@@ -10,7 +10,6 @@
 
     <title>Thêm Món Ăn</title>
 
-
     <!-- Main Styles -->
     <link rel="stylesheet" href="../../assets/styles/style.min.css" />
 
@@ -118,16 +117,29 @@
                         <thead>
                             <?php
                             $user = $_SESSION['username'];
-                            $sql = "SELECT tenmonan FROM anchinh WHERE username= '$user'";
+                            $sql = "SELECT tenmonan,id FROM anchinh WHERE username= '$user'";
                             $result = $con->query($sql);
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>';
-                                    echo '<th class="text-center">';
-                                    echo $row["tenmonan"];
-                                    echo '</tr>';
-                                    echo '</th>';
+                                    // echo '<tr>';
+                                    // echo '<th class="text-center">';
+                                    // echo '<span style="font-size:20px">';
+                                    // echo $row["tenmonan"];
+                                    // echo '</span>';
+                                    // echo ' <span style="height:10%"  class="remove-to-do btn btn-danger">Xóa</span>';
+                                    // echo '</tr>';
+                                    // echo '</th>';
+                            ?>
+                                    <tr>
+                                        <th>
+                                            <span style="margin-left: 40%;" class="text-center"><?php echo $row["tenmonan"] ?></span>
+                                            <span id="<?php echo $row["id"]; ?>" style="margin-left: 10%;font-size:12px;padding: 3px 10px;border-radius: 0px;" class="remove-to-do-an-chinh btn btn-danger">Xóa</span>
+                                        </th>
+
+                                    </tr>
+
+                            <?php
                                 }
                             } else {
                                 echo "0 results";
@@ -150,16 +162,29 @@
                         <thead>
                             <?php
                             $user = $_SESSION['username'];
-                            $sql = "SELECT tenmonan FROM anphu WHERE username='$user'";
+                            $sql = "SELECT tenmonan,id FROM anphu WHERE username= '$user'";
                             $result = $con->query($sql);
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>';
-                                    echo '<th class="text-center">';
-                                    echo $row["tenmonan"];
-                                    echo '</tr>';
-                                    echo '</th>';
+                                    // echo '<tr>';
+                                    // echo '<th class="text-center">';
+                                    // echo '<span style="font-size:20px">';
+                                    // echo $row["tenmonan"];
+                                    // echo '</span>';
+                                    // echo ' <span style="height:10%"  class="remove-to-do btn btn-danger">Xóa</span>';
+                                    // echo '</tr>';
+                                    // echo '</th>';
+                            ?>
+                                    <tr>
+                                        <th>
+                                            <span style="margin-left: 40%;" class="text-center"><?php echo $row["tenmonan"] ?></span>
+                                            <span id="<?php echo $row["id"]; ?>" style="margin-left: 10%;font-size:12px;padding: 3px 10px;border-radius: 0px;" class="remove-to-do-an-phu btn btn-danger">Xóa</span>
+                                        </th>
+
+                                    </tr>
+
+                            <?php
                                 }
                             } else {
                                 echo "0 results";
@@ -180,6 +205,7 @@
         <!-- /.main-content -->
     </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../../assets/scripts/jquery.min.js"></script>
     <script src="../../assets/scripts/modernizr.min.js"></script>
     <script src="../../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
@@ -191,6 +217,55 @@
     <script src="../../assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
     <script src="../../assets/scripts/main.min.js"></script>
     <script src="../../assets/color-switcher/color-switcher.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.remove-to-do-an-chinh').click(function() {
+                const id = $(this).attr('id');
+                console.log(id);
+                $.post("app/remove.php", {
+                        id: id
+                    },
+                    (data) => {
+                        if (data) {
+                            $(this).parent().hide(600);
+                        }
+                    }
+                );
+            });
+            $('.remove-to-do-an-phu').click(function() {
+                const id = $(this).attr('id');
+                console.log(id);
+                $.post("app/remove-phu.php", {
+                        id: id
+                    },
+                    (data) => {
+                        if (data) {
+                            $(this).parent().hide(600);
+                        }
+                    }
+                );
+            });
+
+            $(".check-box").click(function(e) {
+                const id = $(this).attr('data-todo-id');
+
+                $.post('app/check.php', {
+                        id: id
+                    },
+                    (data) => {
+                        if (data != 'error') {
+                            const h2 = $(this).next();
+                            if (data === '1') {
+                                h2.removeClass('checked');
+                            } else {
+                                h2.addClass('checked');
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    </script>
 </body>
 
 </html>
