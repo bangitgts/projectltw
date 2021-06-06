@@ -76,6 +76,13 @@
                         echo '<span style="color:red;font-family:"Roboto", sans-serif;">Mật khẩu không trùng nhau. Xin mời nhập lại</span>';
                     }
                     ?>
+                    <div class="g-recaptcha" data-sitekey="6LfKwBcbAAAAAAHIBYLk_rU1itlkgYmT5SNr2xYb"></div>
+                    <?php
+                    if (isset($_GET['mess']) && $_GET['mess'] == 'captchaerr') {
+                        echo '<span style="color:red;font-family:"Roboto", sans-serif;">Bạn chưa xác nhận captcha</span>';
+                    }
+                    ?>
+
                     <div class="container-login100-form-btn p-t-15">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
@@ -84,13 +91,13 @@
                             </button>
                         </div>
                     </div>
-                                        <div class="flex-col-c p-t-15">
+                    <div class="flex-col-c p-t-15">
                         <a href="../login/" class="txt2" style="font-family: Arial, Helvetica, sans-serif;">
                             Quay lại trang đăng nhập
                         </a>
                     </div>
                 </form>
-               
+
             </div>
         </div>
     </div>

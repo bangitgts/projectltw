@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-
     * {
         font-family: 'Roboto', sans-serif;
     }
@@ -144,6 +143,22 @@
         $querycheckusername = "SELECT * FROM users WHERE username= '$username'";
         $resultemail = $con->query($querycheckemail);
         $resultusername = $con->query($querycheckusername);
+
+    //   captcha
+        if (isset($_POST['submit'])) {
+            $secretKey = "6LfKwBcbAAAAAEGjOXOsDfP8pAZ2qnHPUJpiKWX5";
+            $responseKey = $_POST['g-recaptcha-response'];
+            $userIP = $_SERVER['REMOTE_ADDR'];
+            $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
+            $response = file_get_contents($url);
+            $response = json_decode($response);
+            if ($response->success)
+                {}
+            else
+            header("Location: ./index.php?mess=captchaerr");
+        }
+    // end
+
         if ($password != $repassword) {
             header("Location: ./index.php?mess=passwordfailed");
         }
@@ -153,7 +168,7 @@
         if ($resultemail->num_rows > 0) {
             header("Location: ./index.php?mess=emailtontai");
         }
-        if ($resultemail->num_rows == 0 && $resultusername->num_rows == 0 && $password ==  $repassword) {
+        if ($resultemail->num_rows == 0 && $resultusername->num_rows == 0 && $password ==  $repassword && $response->success == true) {
             $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '" . md5($password) . "', '$email', '$trn_date')";
             $result = mysqli_query($con, $query);
             echo '<div>';
