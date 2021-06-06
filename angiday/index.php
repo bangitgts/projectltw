@@ -29,6 +29,25 @@ require('../auth/auth.php');
     <link rel="stylesheet" href="../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
+<style>
+   
+    .main-section {
+        background: transparent;
+        max-width: 500px;
+        width: 90%;
+        height: 500px;
+        margin: 30px auto;
+        border-radius: 0px;
+    }
+
+    .add-section {
+        width: 70%;
+        background: #fff;
+        margin: 0px auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
 
 <body>
     <div class="main-menu">
@@ -102,54 +121,57 @@ require('../auth/auth.php');
         <div class="main-content">
 
             <div class="col-sm-12 col-md-12 col-12">
-                <form action="./app/add.php" method="POST" role="form">
+          
+                    <div class="add-section">
+                        <form action="./app/add.php" method="POST" role="form">
 
-                    <?php
-                    if (isset($_GET['mess']) && $_GET['mess'] == 'error') {
-                        echo '<input type="text" name="title" style="border-color: #ff6666" class="form-control" id="" placeholder="Bạn chưa điền tên món ăn hoặc chọn món chính hoặc phụ ">';
-                        echo '<div class="radio">';
-                        echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
-                        echo '<label for="monchinh">Món Chính</label>';
-                        echo '<br>';
-                        echo '<input type="radio" id="monphu" name="monan" value="monphu">';
-                        echo '<label for="monphu">Món Phụ</label><br>';
-                        echo '</div>';;
-                    }
-                    if (isset($_GET['mess']) && $_GET['mess'] == 'success') {
-                        echo '<div class="alert alert-success alert-success fade in">';
-                        echo '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
-                        echo '<strong>Thành Công !</strong>Bạn có thể thêm tiếp món ăn';
-                        echo '</div>';
-                        echo '<div class="form-group">';
-                        echo '<input type="text" name="title" class="form-control" id="" placeholder="Tên Món Ăn">';
-                        echo '</div>';
-                        echo '<div class="radio">';
-                        echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
-                        echo '<label for="monchinh">Món Chính</label>';
-                        echo '<br>';
+                            <?php
+                            if (isset($_GET['mess']) && $_GET['mess'] == 'error') {
+                                echo '<input type="text" name="title" style="border-color: #ff6666" class="form-control" id="" placeholder="Bạn chưa điền tên món ăn hoặc chọn món chính hoặc phụ ">';
+                                echo '<div class="radio">';
+                                echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
+                                echo '<label for="monchinh">Món Chính</label>';
+                                echo '<br>';
+                                echo '<input type="radio" id="monphu" name="monan" value="monphu">';
+                                echo '<label for="monphu">Món Phụ</label><br>';
+                                echo '</div>';;
+                            }
+                            if (isset($_GET['mess']) && $_GET['mess'] == 'success') {
+                                echo '<div class="alert alert-success alert-success fade in">';
+                                echo '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+                                echo '<strong>Thành Công !</strong>Bạn có thể thêm tiếp món ăn';
+                                echo '</div>';
+                                echo '<div class="form-group">';
+                                echo '<input type="text" name="title" class="form-control" id="" placeholder="Tên Món Ăn">';
+                                echo '</div>';
+                                echo '<div class="radio">';
+                                echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
+                                echo '<label for="monchinh">Món Chính</label>';
+                                echo '<br>';
 
-                        echo '<input type="radio" id="monphu" name="monan" value="monphu">';
-                        echo '<label for="monphu">Món Phụ</label><br>';
-                        echo '</div>';
-                    }
-                    if (empty($_GET['mess'])) {
-                        echo '<div class="form-group">';
-                        echo '<input type="text" name="title" class="form-control" id="" placeholder="Tên Món Ăn">';
-                        echo '</div>';
-                        echo '<div class="radio">';
-                        echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
-                        echo '<label for="monchinh">Món Chính</label>';
-                        echo '<br>';
+                                echo '<input type="radio" id="monphu" name="monan" value="monphu">';
+                                echo '<label for="monphu">Món Phụ</label><br>';
+                                echo '</div>';
+                            }
+                            if (empty($_GET['mess'])) {
+                                echo '<div class="form-group">';
+                                echo '<input type="text" name="title" class="form-control" id="" placeholder="Tên Món Ăn">';
+                                echo '</div>';
+                                echo '<div class="radio">';
+                                echo '<input type="radio" id="monchinh" name="monan" value="monchinh">';
+                                echo '<label for="monchinh">Món Chính</label>';
+                                echo '<br>';
 
-                        echo '<input type="radio" id="monphu" name="monan" value="monphu">';
-                        echo '<label for="monphu">Món Phụ</label><br>';
-                        echo '</div>';
-                    }
-                    ?>
-                    <button type="submit" class="btn btn-primary">Lưu Lại </button>
-                </form>
+                                echo '<input type="radio" id="monphu" name="monan" value="monphu">';
+                                echo '<label for="monphu">Món Phụ</label><br>';
+                                echo '</div>';
+                            }
+                            ?>
+                            <button type="submit" class="btn btn-primary">Lưu Lại </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
 
             <footer class="footer">
                 <ul class="list-inline">
@@ -172,4 +194,5 @@ require('../auth/auth.php');
     <script src="../assets/scripts/main.min.js"></script>
     <script src="../assets/color-switcher/color-switcher.min.js"></script>
 </body>
+
 </html>

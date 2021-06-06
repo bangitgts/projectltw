@@ -54,13 +54,13 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'mail9250.maychuemail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'sg.it1@phuonganhtourist.com';                     //SMTP username
-    $mail->Password   = 'phuonganh122';                               //SMTP password
+    $mail->Username   = 'noreply@phuonganhtourist.com';                     //SMTP username
+    $mail->Password   = 'bangbang123@@';                               //SMTP password
     $mail->SMTPSecure = 'ssl';         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       =  465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('sg.it1@phuonganhtourist.com', 'Lap Trinh Web');
+    $mail->setFrom('bangitgts@gmail.com', 'Lap Trinh Web');
     $mail->addAddress($email, $user);     //Add a recipient
     $mail->addAddress($email);               //Name is optional
     //Content

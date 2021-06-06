@@ -11,21 +11,14 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'mail9250.maychuemail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'sg.it1@phuonganhtourist.com';                     //SMTP username
-    $mail->Password   = 'phuonganh122';                               //SMTP password
+    $mail->Username   = 'noreply@phuonganhtourist.com';                     //SMTP username
+    $mail->Password   = 'bangbang123@@';                               //SMTP password
     $mail->SMTPSecure = 'ssl';         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       =  465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('bangitgts@gmail.com', 'Mailer');
-    $mail->addAddress('bangitgts@gmail.com', 'Joe User');     //Add a recipient
-    $mail->addAddress('bangitgts@gmail.com');               //Name is optional
-    $mail->addReplyTo('bangitgts@gmail.com', 'Information');
-    $mail->addCC('bangitgts@gmail.com');
-    $mail->addBCC('bangitgts@gmail.com');
-
-   
-
+    $mail->setFrom('phamnguyentanphucgl@gmail.com', 'Phuc');
+    $mail->addAddress('phamnguyentanphucgl@gmail.com', 'Phuc');     //Add a recipient
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Here is the subject';

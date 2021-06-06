@@ -49,8 +49,9 @@
                     <li class="current active">
                         <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
-                            <li><a href="icons-font-awesome-icons.html">Thêm Món Ăn</a></li>
-                            <li class="current active"><a href="icons-fontello.html">Danh Sách Món Ăn</a></li>
+                            <li><a href="../">Thêm Món Ăn</a></li>
+                            <li><a href="../listfood/">Danh Sách Món Ăn</a></li>
+                            <li class="current acitve"><a href="#">Random xem ăn gì nào</a></li>
                         </ul>
                     </li>
                     <li>
@@ -58,7 +59,7 @@
                         <ul class="sub-menu js__content">
                             <li><a href="./todolist/">Thêm Công Việc</a></li>
                             <li><a href="./todolist/show/">Danh Sách Công Việc</a></li>
-                            <li><a href="#">Random xem ăn gì nào</a></li>
+
                         </ul>
                     </li>
 

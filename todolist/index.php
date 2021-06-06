@@ -50,8 +50,8 @@ include '../auth/auth.php';
                     <li>
                         <a class="waves-effect parent-item js__control" href="../angiday/"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
-                            <li><a href="icons-font-awesome-icons.html">Thêm Món Ăn</a></li>
-                            <li><a href="icons-fontello.html">Danh Sách Món Ăn</a></li>
+                            <li><a href="../angiday/">Thêm Món Ăn</a></li>
+                            <li><a href="../angiday/listfood/">Danh Sách Món Ăn</a></li>
                         </ul>
                         <!-- /.sub-menu js__content -->
                     </li>
@@ -110,6 +110,8 @@ include '../auth/auth.php';
                             <input type="text" name="title" placeholder="Thêm công việc của bạn?" />
                             <button type="submit">Thêm công việc&nbsp; </button>
                         <?php } ?>
+
+
                     </form>
                 </div>
                 <?php
@@ -123,14 +125,7 @@ include '../auth/auth.php';
                     echo '</script>';
                 }
                 ?>
-                <div class="show-todo-section">
-                    <div class="todo-item">
-                        <div class="empty">
-                            <img src="img/f.png" width="100%" />
-                            <img src="img/Ellipsis.gif" width="80px">
-                        </div>
-                    </div>
-                </div>
+          
             </div>
             <footer class="footer">
                 <ul class="list-inline">

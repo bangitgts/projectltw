@@ -126,12 +126,10 @@ require '../../auth/auth.php'
                 <br>
                 <br>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
                     <?php if ($todos->rowCount() <= 0) { ?>
                         <div class="todo-item">
                             <div class="empty">
-                                <img src="img/f.png" width="100%" />
-                                <img src="img/Ellipsis.gif" width="80px">
+                                <p>Bạn chưa thêm công việc nào</p>
                             </div>
                         </div>
                     <?php } ?>

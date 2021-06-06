@@ -133,7 +133,7 @@
                             ?>
                                     <tr>
                                         <th>
-                                            <span style="margin-left: 40%;" class="text-center"><?php echo $row["tenmonan"] ?></span>
+                                            <span style="margin-left: 40%; font-size: 23px;font-family: 'Roboto', sans-serif;" class="text-center"><?php echo $row["tenmonan"] ?></span>
                                             <span id="<?php echo $row["id"]; ?>" style="margin-left: 10%;font-size:12px;padding: 3px 10px;border-radius: 0px;" class="remove-to-do-an-chinh btn btn-danger">Xóa</span>
                                         </th>
 
@@ -178,7 +178,7 @@
                             ?>
                                     <tr>
                                         <th>
-                                            <span style="margin-left: 40%;" class="text-center"><?php echo $row["tenmonan"] ?></span>
+                                            <span style="margin-left: 40%; font-size: 23px;font-family: 'Roboto', sans-serif;" style="margin-left: 40%;" class="text-center"><?php echo $row["tenmonan"] ?></span>
                                             <span id="<?php echo $row["id"]; ?>" style="margin-left: 10%;font-size:12px;padding: 3px 10px;border-radius: 0px;" class="remove-to-do-an-phu btn btn-danger">Xóa</span>
                                         </th>
 

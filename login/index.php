@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="text-right p-t-8 p-b-31">
-                            <a href="#"> Quên mật khẩu? </a>
+                            <a href="../forgotpassword/"> Quên mật khẩu? </a>
                         </div>
                         <div class="container-login100-form-btn">
                             <div class="wrap-login100-form-btn">

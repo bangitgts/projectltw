@@ -25,6 +25,24 @@
     <link rel="stylesheet" href="../../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
+<style>
+    .main-section {
+        background: transparent;
+        max-width: 500px;
+        width: 90%;
+        height: 500px;
+        margin: 30px auto;
+        border-radius: 0px;
+    }
+
+    .add-section {
+        width: 70%;
+        background: #fff;
+        margin: 0px auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
 
 <body>
     <?php
@@ -50,7 +68,7 @@
                         <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ăn gì hôm nay</span><span class="menu-arrow fa fa-angle-down"></span></a>
                         <ul class="sub-menu js__content">
                             <li><a href="../index.php">Thêm Món Ăn</a></li>
-                            <li ><a href="../listfood/">Danh Sách Món Ăn</a></li>
+                            <li><a href="../listfood/">Danh Sách Món Ăn</a></li>
                             <li class="current active"><a href="#">Random xem ăn gì nào</a></li>
 
                         </ul>
@@ -84,7 +102,7 @@
 
             <!-- /.ico-item -->
 
-           
+
             <div class="ico-item">
                 <?php
                 echo 'Tài khoản: ' . '<strong>' . $_SESSION['username'] . '</strong>';
@@ -103,32 +121,34 @@
 
     <div id="wrapper">
         <div class="main-content">
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                <div class="panel panel-default">
-                    <!-- Default panel contents -->
-                    <div class="text-center panel-heading">Lấy danh sách món ngẫu nhiên</div>
-                    <!-- Table -->
-                    <br>
+            <div class="add-section">
+               
+
+
                     <form action="./ketqua.php" method="POST" role="form">
                         <p>Số món chính:</p>
                         <input type="number" name="monchinh" id="monchinh" class="form-control" value="monchinh" required="required">
+                        <br>
                         <p>Số món phụ:</p>
                         <input type="number" name="monphu" id="monphu" class="form-control" value="monphu" required="required">
                         <br>
                         <button type="submit" class="btn btn-primary">Lưu Lại </button>
-                   </form>
-                  
-                </div>
+                    </form>
+
+
+               
             </div>
 
-          
             <footer class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <ul class="list-inline">
                     <li>2021 © </li>
                 </ul>
             </footer>
         </div>
-        <!-- /.main-content -->
+    </div>
+    </div>
+
+    <!-- /.main-content -->
     </div>
     </div>
     <script src="../../assets/scripts/jquery.min.js"></script>

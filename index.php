@@ -35,6 +35,26 @@ require("./auth/auth.php");
     * {
         font-family: 'Roboto', sans-serif;
     }
+
+
+    .main-section {
+        background: transparent;
+        max-width: 500px;
+        width: 90%;
+        height: 500px;
+        margin: 30px auto;
+        border-radius: 0px;
+    }
+
+    .add-section {
+        width: 70%;
+        background: #fff;
+        margin: 0px auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+
 </style>
 
 <body>
@@ -106,7 +126,17 @@ require("./auth/auth.php");
 
     <div id="wrapper">
         <div class="main-content">
-
+            <div class="add-section">
+                <h3 class="text-center" style="font-weight: 700;">Bài Tập Lớn</h3>
+                <h4 class="text-center">Môn: Lập Trình Web</h4>
+                <p class="text-center"><strong>ĐỀ TÀI</strong>:THỰC ĐƠN VÀ CÔNG VIỆC HÀNG NGÀY</p>
+                <p class="text-center"><strong>Giảng viên hướng dẫn:</strong> Huỳnh Thanh Sơn</p>
+                <h5>Sinh Viên Thực Hiện</h5>
+                <p>1851120003 – Nguyễn Văn Bằng</p>
+                <p>1851120046 – Phan Thành Tín </p>
+                <p>1851120055 – Nguyễn Văn Thơ </p>
+                <p>1851150064 – Nguyễn Quốc Việt </p>
+            </div>
             <footer class="footer">
                 <ul class="list-inline">
                     <li>2021 © </li>
