@@ -1,7 +1,8 @@
-
+<?php
+require '../connect/connectdb.php';
+?>
 <!DOCTYPE html>
 <html>
-
 
 <head>
     <meta charset="utf-8">
@@ -131,81 +132,44 @@
 </head>
 
 <body>
-    <?php
-    require('../connect/connectdb.php');
-    if (isset($_REQUEST['username'])) { //kt truong username
-        $username = stripslashes($_REQUEST['username']); // loai bo dau \ trong chuoi
-        $username = mysqli_real_escape_string($con, $username);
-        $email = stripslashes($_REQUEST['email']);
-        $email = mysqli_real_escape_string($con, $email);
-        $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
-        $trn_date = date("Y-m-d H:i:s");
-        $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '" . md5($password) . "', '$email', '$trn_date')";
-        $result = mysqli_query($con, $query);
-        if ($result) {
-            echo '<div>';
-            echo '<div class="modal-dialog modal-confirm">';
-            echo '<div class="modal-content">';
-            echo '<div class="modal-header justify-content-center">';
-            echo '<div class="icon-box">';
-            echo '<i class="fa fa-check"></i>';
-            echo '</div>';
-            echo '</div>';
-            echo '<div class="modal-body text-center">';
-            echo '<h4 style="font-family: Arial, Helvetica, sans-serif;">Chúc mừng bạn!</h4>';
-            echo '<p style="font-family: Arial, Helvetica, sans-serif;">Tài khoản của bạn đã được tạo thành công</p>';
-            echo '<button class="btn btn-success" data-dismiss="modal"><a style="font-family: Arial, Helvetica, sans-serif; color: gray" href="../login">Bấm vào đây để đăng nhập ngay</a> </button>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }
-    } else { ?>
-        <div class="limiter">
-            <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-                <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                    <form class="login100-form validate-form" name="registration" action="" method="post">
-                        <span class="login100-form-title p-b-49">
-                           Forgot Password
-                        </span>
-                        <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
-                            <span class="label-input100">Username</span>
-                            <input class="input100" type="text" name="username" placeholder="Type your username" required>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            
+                <!-- <form class="login100-form validate-form" name="registration" action="" method="post"> -->
+                    <span class="login100-form-title p-b-49">
+                        Forgot Password
+                    </span>
+                    <form action="check.php" method="POST" autocomplete="off">
+                        <div class="wrap-input100 validate-input m-b-23" data-validate="Username is required">
+                            <span class="label-input100">Username or Email</span>
+                            <input class="input100" type="text" name="username" placeholder="Type your username or email" required>
                             <span class="focus-input100" data-symbol="&#xf206;"></span>
                         </div>
-
-                        <div class="wrap-input100 validate-input m-b-23" data-validate="Email is required">
-                            <span class="label-input100">Email</span>
-                            <input class="input100" type="email" name="email" placeholder="Type your email" required>
-                            <span class="focus-input100" data-symbol="&#xf190;"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input m-b-23" data-validate="Password is required">
-                            <span class="label-input100">Password</span>
-                            <input class="input100" type="password" name="password" placeholder="Type your password" required>
-                            <span class="focus-input100" data-symbol="&#xf190;"></span>
-                        </div>
-                        
+                        <?php
+                        if( !empty($_GET['mess']) && $_GET['mess'] == "err")
+                            echo '<p class="text-center"style="color:red">Không tìm thấy tài khoản nào hợp lệ</p>';
+                        ?>
                         <div class="container-login100-form-btn p-t-15">
                             <div class="wrap-login100-form-btn">
                                 <div class="login100-form-bgbtn"></div>
                                 <button type="submit" name="submit" class="login100-form-btn">
-                                    Register
+                                    Forgot
                                 </button>
                             </div>
                         </div>
-
-                        <div class="flex-col-c p-t-15">
-                            <a href="../login/" class="txt2" style="font-family: Arial, Helvetica, sans-serif;">
-                                Quay lại trang đăng nhập
-                            </a>
-                        </div>
                     </form>
-                </div>
+                    <div class="flex-col-c p-t-15">
+                        <a href="../login/" class="txt2" style="font-family: Arial, Helvetica, sans-serif;">
+                            Quay lại trang đăng nhập
+                        </a>
+                    </div>
+                <!-- </form> -->
             </div>
         </div>
-    <?php } ?>
+    </div>
+
 </body>
 
 </html>
