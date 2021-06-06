@@ -103,9 +103,9 @@ include '../auth/auth.php';
                             <?php
                            
                             ?>
-                            <input type="password" name="password" placeholder="Nhập mật khẩu cũ" value="newpassword" require />
-                            <input type="password" name="newpassword" placeholder="Nhập mật khẩu mới" value="newpassword" require />
-                            <input type="password" name="newpasswordre" placeholder="Nhập lại mật khẩu mới" value="newpasswordre" require />
+                            <input type="password" name="password" placeholder="Nhập mật khẩu cũ" require />
+                            <input type="password" name="newpassword" placeholder="Nhập mật khẩu mới" require />
+                            <input type="password" name="newpasswordre" placeholder="Nhập lại mật khẩu mới" require />
                             <?php
                             if (isset($_GET['mess']) && $_GET['mess'] == 'err') {
                                 echo '<p class="text-center"style="color:red">Mật khẩu bạn nhập không trùng khớp. Vui lòng nhập lại</p>';
