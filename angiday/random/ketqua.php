@@ -15,14 +15,6 @@
     <!-- Material Design Icon -->
     <link rel="stylesheet" href="../../assets/fonts/material-design/css/materialdesignicons.css" />
 
-    <!-- mCustomScrollbar -->
-    <link rel="stylesheet" href="../../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css" />
-
-    <!-- Waves Effect -->
-    <link rel="stylesheet" href="../../assets/plugin/waves/waves.min.css" />
-
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="../../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
 
@@ -189,16 +181,7 @@
     </div>
     </div>
     <script src="../../assets/scripts/jquery.min.js"></script>
-    <script src="../../assets/scripts/modernizr.min.js"></script>
-    <script src="../../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../assets/plugin/nprogress/nprogress.js"></script>
-    <script src="../../assets/plugin/sweet-alert/sweetalert.min.js"></script>
-    <script src="../../assets/plugin/waves/waves.min.js"></script>
-    <!-- Full Screen Plugin -->
-    <script src="../../assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
-    <script src="../../assets/scripts/main.min.js"></script>
-    <script src="../../assets/color-switcher/color-switcher.min.js"></script>
+
 </body>
 
 </html>

@@ -13,19 +13,7 @@ include '../auth/auth.php';
     <title>Quản lí công việc</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="../assets/styles/style.min.css" />
-
-    <!-- Material Design Icon -->
     <link rel="stylesheet" href="../assets/fonts/material-design/css/materialdesignicons.css" />
-
-    <!-- mCustomScrollbar -->
-    <link rel="stylesheet" href="../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css" />
-
-    <!-- Waves Effect -->
-    <link rel="stylesheet" href="../assets/plugin/waves/waves.min.css" />
-
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="../assets/plugin/sweet-alert/sweetalert.css" />
-
 </head>
 <style>
     * {
@@ -65,20 +53,17 @@ include '../auth/auth.php';
                     </li>
 
                 </ul>
-                <!-- /.menu js__accordion -->
+             
             </div>
-            <!-- /.navigation -->
         </div>
-        <!-- /.content -->
     </div>
-    <!-- /.main-menu -->
 
     <div class="fixed-navbar">
         <div class="pull-left">
             <button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
             <h1 class="page-title">Thêm Công Việc</h1>
-            <!-- /.page-title -->
         </div>
+
         <!-- /.pull-left -->
         <div class="pull-right">
             <div class="ico-item">
@@ -89,11 +74,8 @@ include '../auth/auth.php';
                     <li><a href="../changepassword/">Đổi mật khẩu</a></li>
                     <li><a class="" href="./logout/">Log Out</a></li>
                 </ul>
-                <!-- /.sub-ico-item -->
             </div>
-            <!-- /.ico-item -->
         </div>
-        <!-- /.pull-right -->
     </div>
 
 
@@ -133,7 +115,6 @@ include '../auth/auth.php';
                 </ul>
             </footer>
         </div>
-        <!-- /.main-content -->
     </div>
     </div>
 
@@ -177,17 +158,7 @@ include '../auth/auth.php';
         });
     </script>
     <script src="../assets/scripts/jquery.min.js"></script>
-    <script src="../asets/scripts/modernizr.min.js"></script>
-    <script src="../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/plugin/nprogress/nprogress.js"></script>
-    <script src="../assets/plugin/sweet-alert/sweetalert.min.js"></script>
-    <script src="../assets/plugin/waves/waves.min.js"></script>
-    <!-- Full Screen Plugin -->
-    <script src="../assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
-
     <script src="../assets/scripts/main.min.js"></script>
-    <script src="../assets/color-switcher/color-switcher.min.js"></script>
 </body>
 
 </html>

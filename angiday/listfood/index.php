@@ -9,21 +9,8 @@
     <meta name="author" content="" />
 
     <title>Thêm Món Ăn</title>
-
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="../../assets/styles/style.min.css" />
-
-    <!-- Material Design Icon -->
+    <link rel="stylesheet" href="../../assets/styles/style.min.css" /> 
     <link rel="stylesheet" href="../../assets/fonts/material-design/css/materialdesignicons.css" />
-
-    <!-- mCustomScrollbar -->
-    <link rel="stylesheet" href="../../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css" />
-
-    <!-- Waves Effect -->
-    <link rel="stylesheet" href="../../assets/plugin/waves/waves.min.css" />
-
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="../../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
 <style>
@@ -206,17 +193,6 @@
     </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../../assets/scripts/jquery.min.js"></script>
-    <script src="../../assets/scripts/modernizr.min.js"></script>
-    <script src="../../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../assets/plugin/nprogress/nprogress.js"></script>
-    <script src="../../assets/plugin/sweet-alert/sweetalert.min.js"></script>
-    <script src="../../assets/plugin/waves/waves.min.js"></script>
-    <!-- Full Screen Plugin -->
-    <script src="../../assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
-    <script src="../../assets/scripts/main.min.js"></script>
-    <script src="../../assets/color-switcher/color-switcher.min.js"></script>
     <script>
         $(document).ready(function() {
             $('.remove-to-do-an-chinh').click(function() {

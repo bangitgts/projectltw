@@ -13,18 +13,7 @@ include '../auth/auth.php';
     <title>Quản lí công việc</title>
     <link rel="stylesheet" href="../todolist/css/style.css">
     <link rel="stylesheet" href="../assets/styles/style.min.css" />
-
-    <!-- Material Design Icon -->
     <link rel="stylesheet" href="../assets/fonts/material-design/css/materialdesignicons.css" />
-
-    <!-- mCustomScrollbar -->
-    <link rel="stylesheet" href="../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css" />
-
-    <!-- Waves Effect -->
-    <link rel="stylesheet" href="../assets/plugin/waves/waves.min.css" />
-
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="../assets/plugin/sweet-alert/sweetalert.css" />
 
 </head>
 
@@ -34,7 +23,6 @@ include '../auth/auth.php';
             <a href="index.html" class="logo">Lập Trình Web</a>
             <button type="button" class="button-close fa fa-times js__menu_close"></button>
         </header>
-        <!-- /.header -->
         <div class="content">
 
             <div class="navigation">
@@ -48,7 +36,6 @@ include '../auth/auth.php';
                             <li><a href="icons-font-awesome-icons.html">Thêm Món Ăn</a></li>
                             <li><a href="icons-fontello.html">Danh Sách Món Ăn</a></li>
                         </ul>
-                        <!-- /.sub-menu js__content -->
                     </li>
                     <li class="">
                         <a class="waves-effect parent-item js__control " href="../todolist/"><i class="menu-icon mdi mdi-pencil-box"></i><span>Quản Lý Công Việc</span><span class="menu-arrow fa fa-angle-down"></span></a>
@@ -56,25 +43,18 @@ include '../auth/auth.php';
                             <li class="current active"><a href="./">Thêm Công Việc</a></li>
                             <li><a href="./show/">Danh Sách Công Việc</a></li>
                         </ul>
-                        <!-- /.sub-menu js__content -->
                     </li>
 
                 </ul>
-                <!-- /.menu js__accordion -->
             </div>
-            <!-- /.navigation -->
         </div>
-        <!-- /.content -->
     </div>
-    <!-- /.main-menu -->
 
     <div class="fixed-navbar">
         <div class="pull-left">
             <button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
             <h1 class="page-title">Đổi mật khẩu</h1>
-            <!-- /.page-title -->
         </div>
-        <!-- /.pull-left -->
         <div class="pull-right">
             <div class="ico-item">
                 <?php
@@ -198,18 +178,6 @@ include '../auth/auth.php';
             });
         });
     </script>
-    <script src="../assets/scripts/jquery.min.js"></script>
-    <script src="../asets/scripts/modernizr.min.js"></script>
-    <script src="../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/plugin/nprogress/nprogress.js"></script>
-    <script src="../assets/plugin/sweet-alert/sweetalert.min.js"></script>
-    <script src="../assets/plugin/waves/waves.min.js"></script>
-    <!-- Full Screen Plugin -->
-    <script src="../assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
-
-    <script src="../assets/scripts/main.min.js"></script>
-    <script src="../assets/color-switcher/color-switcher.min.js"></script>
 </body>
 
 </html>
